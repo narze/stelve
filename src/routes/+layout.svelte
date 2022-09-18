@@ -27,7 +27,6 @@
   <header class="navbar bg-neutral text-neutral-content overflow-clip">
     <div class="flex-1">
       <span class="normal-case text-xl px-4 font-bold">Stelve</span>
-      <span class="normal-case text-xl px-2 font-light whitespace-nowrap">A SvelteKit playground</span>
     </div>
     <div class="flex-none">
       🌞<input type="checkbox" data-toggle-theme="light,dark" data-act-class="ACTIVE" class="toggle mx-2" checked={darkMode} />🌚

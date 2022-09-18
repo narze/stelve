@@ -1,11 +1,9 @@
-<div class="min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center gap-6 p-8">
-	<div class="hero max-w-5xl p-8 bg-base-200">
+<div class="min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center gap-4 p-8">
+	<div class="hero max-w-5xl p-4">
 		<div class="hero-content text-center">
 			<div class="max-w-xl">
-				<h1 class="text-5xl font-bold">Welcome to SvelteKit</h1>
-				<p class="pt-6">
-					Visit <a class="link" href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
-				</p>
+				<h1 class="text-5xl font-bold">Stelve</h1>
+				<p class="pt-6">A SvelteKit Playground</p>
 			</div>
 		</div>
 	</div>
