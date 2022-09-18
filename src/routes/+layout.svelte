@@ -2,10 +2,24 @@
   import "../app.postcss";
   import { onMount } from "svelte";
   import { themeChange } from 'theme-change'
+	import { browser } from "$app/environment";
+
+  let darkMode = false
 
   onMount(() => {
     themeChange(false)
-    // 👆 false parameter is required for svelte
+
+    if (browser) {
+      const htmlTheme = document.querySelector("html")?.dataset.theme
+
+      if (htmlTheme === "dark") {
+        // console.log('html theme="dark"')
+        darkMode = true
+      } else if (!htmlTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // console.log('system theme = "dark"')
+        darkMode = true
+      }
+    }
   })
 </script>
 
@@ -16,7 +30,8 @@
       <span class="normal-case text-xl px-2 font-light whitespace-nowrap">A SvelteKit playground</span>
     </div>
     <div class="flex-none">
-      🌞<input type="checkbox" data-toggle-theme="dark,light" data-act-class="ACTIVE" class="toggle mx-2" />🌝
+      🌞<input type="checkbox" data-toggle-theme="light,dark" data-act-class="ACTIVE" class="toggle mx-2" checked={darkMode} />🌚
+      <!-- {darkMode ? "dark" : "light"} -->
     </div>
   </header>
 
