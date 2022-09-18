@@ -2,13 +2,13 @@
   import "../app.postcss";
 </script>
 
-<header class="navbar bg-neutral text-neutral-content">
-  <div class="navbar-start">
+<div class="flex flex-col min-h-screen">
+  <header class="navbar bg-neutral text-neutral-content overflow-clip">
     <span class="normal-case text-xl px-4 font-bold">Stelve</span>
-    <span class="normal-case text-xl px-2 font-light">A SvelteKit playground</span>
-  </div>
-</header>
+    <span class="normal-case text-xl px-2 font-light whitespace-nowrap">A SvelteKit playground</span>
+  </header>
 
-<main class="container mx-auto">
-  <slot></slot>
-</main>
+  <main class="container mx-auto flex-grow">
+    <slot></slot>
+  </main>
+</div>
